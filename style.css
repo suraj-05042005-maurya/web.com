@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    background-color: #00bcd4;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 55px;
+}
+
+nav ul li a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+    padding: 7px 13px;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.checkButton {
+    margin-right: 20px;
+    font-size: 35px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+.myCheckbox {
+    display: none;
+}
+
+a:hover,
+a.acctive {
+    color: purple;
+    text-decoration: underline;
+    border-radius: 20px;
+    background-color: bisque;
+}
+
+@media screen and (max-width:952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:858px) {
+    .checkButton {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 34%;
+        height: 100vh;
+        background-color: #ff5722;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        color: black;
+    }
+
+    a:hover.a.active {
+        color: #e60064;
+    }
+
+    .myCheckbox:checked~ul {
+        left: 0;
+    }
+}
+
+/* main section style from header */
+
+.container1 {
+    width: 100%;
+    top: 100px;
+    position: absolute;
+}
+
+.container1 h1 {
+    margin-left: 10px;
+    max-width: 100%;
+    align-self: stretch;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.same {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    width: 190px;
+    height: 328px;
+    border: 1px solid rgb(181, 178, 178);
+    border-radius: 10px;
+
+}
+
+.img {
+    width: 170px;
+    height: 180px;
+    border-radius: 10px;
+
+}
+
+.same p {
+    /* margin-left: 10px; */
+    align-self: stretch;
+    display: inline-block;
+    max-width: 163px;
+    text-align: center;
+   
+    color: black;
+}
+.buy-now{
+    margin: 10px 0 0 20px;
+    height: 34px;
+    width: 109px;
+    background-color: orangered;
+    border-radius: 20px;
+    border-style: none;
+    font-weight:bold;
+}
+.buy-now a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media screen and (max-width:770px) {
+    .same {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 4px;
+        width: 96%;
+        height: 200px;
+        border: 1px solid rgb(181, 178, 178);
+        position: relative;
+        border-radius: 10px;
+    }
+    .same p{
+        margin-left: 96px;
+        overflow: scroll;
+        max-width: 346px;
+        /* line-height: 22px; */
+        height: 32px;
+    }
+    .same .para-2{
+        margin-left: 84px;
+    }
+    
+
+    .img {
+        width: 81px;
+        height: 114px;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .same {
+        box-sizing: border-box;
+        margin-left: 2%;
+        align-self: stretch;
+        max-width: 800px;
+        height: 136px;
+        border: 1px solid rgb(181, 178, 178);
+        border-radius: 10px;
+        display: inline-block;
+
+    }
+    .buy-now{
+        margin: 10px 0 0 130px;
+        height: 34px;
+        width: 109px;
+        background-color: orangered;
+        border-radius: 20px;
+        border-style: none;
+        font-weight:bold;
+    }
+}
